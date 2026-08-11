@@ -1,0 +1,28 @@
+{
+  "entities": {
+    "User": {
+      "title": "User Profile",
+      "description": "Registered user profile stored in Firestore",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "description": "Unique user identifier" },
+        "displayName": { "type": "string", "description": "User display name" },
+        "email": { "type": "string", "description": "User email address" },
+        "phoneNumber": { "type": "string", "description": "User phone number" },
+        "photoURL": { "type": "string", "description": "User profile avatar photo URL" },
+        "provider": { "type": "string", "description": "Authentication provider name" },
+        "createdAt": { "type": "string", "description": "Registration ISO timestamp" },
+        "updatedAt": { "type": "string", "description": "Last profile update ISO timestamp" },
+        "favoriteItems": { "type": "array", "description": "List of favorite waffle item IDs" },
+        "orderCount": { "type": "number", "description": "Total order count" }
+      },
+      "required": ["uid", "provider"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profile documents collection"
+    }
+  }
+}

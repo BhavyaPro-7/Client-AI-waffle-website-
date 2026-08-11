@@ -1,0 +1,6 @@
+{
+  "name": "Waffles On Wheels",
+  "description": "100% Veg artisanal waffles, mini pancakes, shakes and desserts at Gol Garden, Malad East, Mumbai.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
